@@ -1,0 +1,449 @@
+html{
+    box-sizing: border-box;
+    margin:0;
+    padding:2%;
+}
+body {
+    background-image: linear-gradient(to right, #4F4F51, #2C2B30);
+    background-size: cover;
+    font-family: 'Alice', 'sans-serif';
+    color: #D6D6D6;
+    line-height: 1.5;
+}
+/* color scheme: #2C2B30, #4F4F51, #D6D6D6, #F2C4CE, #F58F7C*/
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+li {
+    display: inline-flex;
+    padding-bottom: 4px;
+}
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0px;
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+ul li .active {
+    color: black;
+    background-color: #F58F7C;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#about, #history, #dict, #lit{
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+#about_photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    padding: 5px;
+    border: 5px solid black;
+    box-shadow: 4px 4px 5px #F2C4CE;
+}
+
+.lit_text, .history_text, .dict_text{
+    display: grid;
+    border:10px solid #F58F7C;
+    margin: 10px 0 10px 0;
+    border-radius: 15px 50px;
+    background: #F58F7C;
+    text-align: center;
+    color:#2C2B30;
+    text-decoration: none;
+}
+
+.lit_text h2, .history_text h2, .dict_text h2{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+h2, dt{
+    font-family: 'Playfair Display', serif;
+}
+
+footer {
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    font-size: smaller;
+    margin-top: 2%;
+    background-color: #4F4F51;
+}
+footer a {
+    text-decoration: none;
+    color: #F2C4CE;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+#thanks, #copyright {
+    color: #D6D6D6;
+    line-height: 1.5;
+}
+
+#about_photo:hover {
+    transform: scale(1.1);
+}
+
+
+.lit_title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 2rem;
+    background-image: linear-gradient(to left, #D6D6D6, #F58F7C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lit_sec, dt {
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right, #f2c4ce, #F58F7C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lit_card img {
+    display: block;
+    width: 100%;
+}
+.lit_card p {
+    text-align: left;
+}
+.points {
+    list-style-type: none;
+    text-align: center;
+}
+.lit_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width:300px;
+    background: rgba(255, 255,255,0.05);
+    margin:10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    padding: 2px;
+    flex-direction: column;
+}
+.hist_container {
+    display: grid;
+    justify-content: space-around;
+}
+.hist_card {
+    border:3px solid #F2C4CE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width:300px;
+    background: rgba(255, 255,255,0.05);
+    margin:10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    padding: 2px;
+    flex-direction: column;
+}
+
+.hist_card img {
+    display: block;
+    width: 100%;
+}
+
+.hist_card h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    background-image: linear-gradient(to left, #D6D6D6, #F58F7C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+    padding: 2%;
+}
+
+dt {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dict_card {
+    display: grid;
+    background: rgba(214, 214,214,0.25);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border-radius: 20px;
+    margin: 5%;
+    padding: 2%;
+}
+
+.dict_sec {
+    color: black;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#dict_sub {
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color:rgba(245, 143, 124,0.50);
+    text-shadow: 2px 2px #d6d6d60b;
+    font-size: medium;
+}
+
+/* tablet view */
+@media only screen and (min-width: 768px) {
+
+nav {
+    font-size: x-large;
+}
+
+.active {
+    font-size: large;
+}
+
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0px;
+    list-style: none;
+}
+
+#about_photo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a:hover {
+    background-color: transparent;
+    border-top:2px solid #F2C4CE;
+    border-bottom: 2px solid #F2C4CE;
+    border-radius: 10px;
+}
+.container {
+    display:flex;
+    flex-direction: column;
+}
+
+.lit_text, .history_text, .dict_text{
+    max-width: 50%;
+    display: grid;
+    justify-items: center;
+    border: 10px solid #F58F7C;
+    margin: 1% auto;
+    border-radius: 15px 50px;
+    background: #F58F7C;
+    text-align: center;
+    color: #2C2B30;
+}
+
+.container {
+    font-size: 1.5rem;
+}
+
+footer {
+    font-size: x-large;
+}
+
+
+.lit_container, .hist_container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.lit_card, .hist_card {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 95%;
+    background: rgba(255, 255,255,0.05);
+    margin: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    padding: 2px;
+    flex-direction: column;
+}
+
+.hist_p {
+    font-size: large;
+    padding: 2%;
+}
+
+.byebye {
+    display: none;
+}
+
+dt {
+    font-size: 2rem;
+}
+
+.dict_container{
+    display: flex
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.dict_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    align-content: flex-start;
+}
+}
+
+.dict_sec {
+    font-size: larger;
+}
+
+dd p {
+    font-size: medium;
+}
+
+#dict_sub {
+    font-size: large;
+}
+img:hover {
+    transform: scale(1.2);
+}
+
+/* Laptop info */
+
+@media only screen and (min-width: 1024px) {
+
+.active {
+    font-size: 1.5rem;
+}
+
+
+.lit_container, .hist_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+}
+
+.container, .lit_container, .dict_container, .hist_container {
+    margin-top: 2%;
+}
+
+.lit_card, .hist_card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 95%;
+    max-height: fit-content;
+    background: rgba(255, 255,255,0.05);
+    margin: 10px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    padding: 2px;
+    flex-direction: column;
+}
+
+.lit_sec {
+    font-size: 1.7rem;
+}
+
+.lit_card p, ul, .hist_p{
+    font-size: 1.3rem;
+}
+
+#about_links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 6px;
+    margin: 5px auto;
+    justify-content: center;
+    justify-items: center;
+}
+
+.lit_text, .history_text, .dict_text {
+    max-width: 100%;
+    display: grid;
+    justify-items: center;
+    border: 10px solid #F58F7C;
+    margin: 1% auto;
+    border-radius: 15px 50px;
+    background: #F58F7C;
+    text-align: center;
+    color: #2C2B30;
+}
+
+.byebye {
+    display: none;
+}
+
+dt {
+    font-size: 2.1rem;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dict_sec {
+    font-size: x-large;
+}
+
+dd p {
+    font-size: large;
+}
+
+#dict_sub {
+    font-size: x-large;
+}
+
+}
